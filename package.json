@@ -19,7 +19,7 @@
     "e2e",
     "tests"
   ],
-  "author": "Maximilian Schwarzmüller/ Academind GmbH",
+  "author": "Baraka Larbi",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.20.2",
