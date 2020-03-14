@@ -32,4 +32,13 @@ test("should click around", async () => {
     args: ["--window-size=1920,1080"]
   });
   const page = await browser.newPage();
+  await page.goto(
+        'file:///C:/Users/laridev/Documents/coding_projects/tests/js-testing-introduction/index.html'
+  );
+  await page.click('input#name');
+  await page.type('input#name', "baraka");
+  
+  await page.click('input#age');
+  await page.type('input#age', "21");
+  await page.click('#btnAddUser');
 });
