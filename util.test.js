@@ -33,12 +33,14 @@ test("should click around", async () => {
   });
   const page = await browser.newPage();
   await page.goto(
-        'file:///C:/Users/laridev/Documents/coding_projects/tests/js-testing-introduction/index.html'
+    "file:///C:/Users/laridev/Documents/coding_projects/tests/js-testing-introduction/index.html"
   );
-  await page.click('input#name');
-  await page.type('input#name', "baraka");
-  
-  await page.click('input#age');
-  await page.type('input#age', "21");
-  await page.click('#btnAddUser');
+  await page.click("input#name");
+  await page.type("input#name", "baraka");
+
+  await page.click("input#age");
+  await page.type("input#age", "21");
+  await page.click("#btnAddUser");
+  const finalText = await page.$eval(".user-item", el => el.textContent);
+  expect(finalText).toBe('baraka (21 years old)')
 });
